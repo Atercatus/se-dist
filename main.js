@@ -1424,10 +1424,7 @@ var BookingService = /** @class */ (function () {
             booking_id: bookingId,
             changer_id: cancelerId
         };
-        var tmp = this.http.post(this.global.url + "/cancle-book", body);
-        console.log("return: ");
-        console.log(tmp);
-        return tmp;
+        return this.http.post(this.global.url + "/cancle-book", body);
     };
     //사용종료
     BookingService.prototype.end = function (bookingId, endId, endTime) {
